@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Pet Care - Gestão de cuidados do Pet</title>
+</head>
+
+<body>
+    <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">My Pet Care</div>
+        <div class="banner">
+            <col><img src="img/pets.jpg"></col>
+        </div>
+    </header>
+    <section>
+        <form>
+            <table>
+                <tr>
+                    <td class="col_new_pet">
+                        <div class="field">
+                            <label for="newName"><strong>Nome do animal:</strong></label>
+                            <input type="text" name="newName" id="newName"
+                                formGroupName="name"
+                                minlength="3"
+                                maxlength="50"
+                                required>
+                        </div>
+                        <div class="field">
+                            <label for="newBirthday"><strong>Data de nascimento:</strong></label>
+                            <input type="date" name="newBirthday" id="newBirthday"
+                                formGroupName="birthday"
+                                minlength="2010-01-01"
+                                
+                                required>
+                        </div>
+                        <div class="field">
+                            <label for="newType"><strong>Tipo:</strong></label>
+                            <select name="newType" id="newType"
+                                required>
+                                <option [value]="'dog'"selected>Cão</option>
+                                <option [value]="'rabbit'">Coelho</option>
+                                <option [value]="'cat'">Gato</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="newGender"><strong>Sexo:</strong></label>
+                            <select name="newGender" id="newGender"
+                                required>
+                                <option [value]="M"selected>Macho</option>
+                                <option [value]="F">Fêmea</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="newBreed"><strong>Raça:</strong></label>
+                            <input type="text" id="newBreed">
+                        </div>
+                        <div class="field">
+                            <label for="newWeigth"><strong>Peso:</strong></label>
+                            <input type="text" id="newWeigth">
+                        </div>
+                        <div class="field">
+                            <label for="newMicrochip"><strong>Microchip:</strong></label>
+                            <input type="text" id="newMicrochip">
+                        </div>
+                        <hr>
+                        <div class="btn">
+                            <button onclick="newPet()" class="addBtn">NOVO PET</button>
+                        </div>
+                    </td>
+                    <td class="col_list_pet">
+                        <!-- Tabela com pets existentes -->
+                        <label class="label_pet_list">Lista de Pets cadastrados</label>
+                        <table id="tab_pet_list" class="tab_pet_list">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Nascimento</th>
+                                    <th>Tipo</th>
+                                    <th>Sexo</th>
+                                    <th>Raça</th>
+                                    <th>Peso</th>
+                                    <th>Microchip</th>
+                                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tab_pet_body">
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script src="scripts.js"></script>
+    </section>
+</body>
+
+

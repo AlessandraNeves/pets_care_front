@@ -1,0 +1,142 @@
+:root {
+    --primary-color: rgb(60, 146, 102);
+    --secondary-color: rgb(225, 222, 199);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--secondary-color);
+    font-family: 'Tahoma', 'Arial Nova';
+    color: gray;
+}
+
+header {
+    margin: 0px;
+
+}
+
+.title {
+    margin: 0px;
+    padding:10px;
+    text-align: center;
+    font-family: 'Arial Rounded MT Bold', 'Tahoma', 'Arial Nova';
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    background-image: linear-gradient(270deg, rgb(104, 249, 174), var(--primary-color));
+
+}
+
+.banner {
+    height: 210px;
+    overflow: hidden;
+    background-color: white;
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    margin: 0px;
+}
+
+
+
+.col_new_pet {
+    margin: 0px;
+    width: 30%;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 20px;
+    border-right: 1px solid var(--primary-color);;
+}
+
+.col_list_pet {
+    width: 70%;
+    padding-top: 25px;
+    padding-left: 25px; 
+    vertical-align: top;
+}
+
+.label_pet_list {
+    color: var(--primary-color);
+    font-family: 'Arial Rounded MT Bold', 'Tahoma', 'Arial Nova';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.field {
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.btn {
+    text-align: center;
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.addBtn {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.addBtn:hover {
+    background-color:  var(--primary-color);
+    color: white;
+}
+
+.tab_pet_list {
+    margin: 10px;
+    padding: 0px;
+    border-collapse: collapse;
+    border: solid 1px gray;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 900px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.15);
+}
+
+.tab_pet_list thead tr {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: left;
+    justify-content: center;
+    font-weight: bold;
+
+}
+
+.tab_pet_list th,
+.tab_pet_list td {
+    padding-left: 15px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.tab_pet_list tbody tr {
+    color: rgb(80, 80, 80);
+    }
+
+.tab_pet_list tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3
+}
+
+.tab_pet_list body tr:last-of-type {
+    border-bottom: 2px solid var(--primary-color);
+    border-bottom-left-radius: 1px;
+}
+
+.tab_pet_list body tr.active-row {
+    font-weight: bold;
+    color: #009879;
+
+}
